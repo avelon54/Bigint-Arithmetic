@@ -12,8 +12,8 @@ def write_result_to_file(file_path, result):
         file.write(str(result))
 
 
-number1 = read_number_from_file("/Users/yasir/Desktop/number1.txt")
-number2 = read_number_from_file("/Users/yasir/Desktop/number2.txt")
+number1 = read_number_from_file("number1.txt")
+number2 = read_number_from_file("number2.txt")
 
 
 addition = number1 + number2
@@ -25,5 +25,5 @@ write_result_to_file("subtraction.txt", subtraction)
 write_result_to_file("multiplication.txt", multiplication)
 
 getcontext().prec = 100
-division = number1 / number2 if number2 != 0 else 'Bölme Hatası'
-write_result_to_file("division.txt", division if division != 'Bölme Hatası' else "Bölünemez (bölücü 0)")
+division = number1 / number2 if number2 != 0 else 'Division Error'
+write_result_to_file("division.txt", division if division != 'Division Error' else "Divided by zero Error!")
